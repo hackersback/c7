@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html style="font: bold 16px arial;">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>#DesiPiyush
+
+  </title>
+  <link rel="icon" href="pump.png">
+
+</head>
+
+<body id="body">
+
+  <style>
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(to bottom, #ff2ae0, #645bf6);
+      border-radius: 20px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      letter-spacing: 1px;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #3c2846;
+      color: #fff;
+    }
+
+    h1 {
+      text-transform: capitalize;
+    }
+
+    .card {
+      position: absolute;
+      top: 6%;
+      width: 1100px;
+      height: 600px;
+      background: linear-gradient(to bottom, #ff2ae0, #645bf6);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+      border-radius: 20px;
+    }
+
+    .card i {
+      position: absolute;
+      top: 40px;
+      left: -15px;
+      width: 1000px;
+      height: 50px;
+      background: #af43f1;
+      border-radius: 30px;
+      border-bottom-left-radius: 0;
+    }
+
+
+    .card i::before {
+      content: '';
+      position: absolute;
+      top: 50px;
+      width: 15px;
+      height: 30px;
+      background: #8045c6;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      z-index: 2;
+    }
+
+    .card i::after {
+      content: '';
+      position: absolute;
+      top: 50px;
+      width: 15px;
+      height: 15px;
+      background: #af43f1;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    h1 {
+      top: 8%;
+      left: 45%;
+      position: absolute;
+      text-align: center;
+    }
+
+    p {
+      position: absolute;
+      top: 50%;
+      text-align: center;
+      margin-left: 50px;
+    }
+
+    .card:nth-child(2) {
+      position: absolute;
+      top: 6%;
+    }
+
+    .card:nth-child(3) {
+      position: absolute;
+      top: 6%;
+    }
+
+    .card:nth-child(4) {
+      position: absolute;
+      top: 6%;
+    }
+
+    .in {
+      position: absolute;
+      top: 0;
+    }
+
+    button {
+      padding: 5px;
+      border-radius: 20px;
+      border: none;
+      background: #8045c6;
+      color: #fff;
+    }
+
+    .chnage {
+      font: bold 16px arvo;
+      background: transparent;
+      border: 4px solid #8045c6;
+      border-radius: 10px;
+      padding: 5px 10px;
+      transition: all 0.3s ease-out;
+      cursor: pointer;
+    }
+
+    .chnage:active {
+      transform: translateY(10px);
+      box-shadow: none;
+    }
+
+  </style>
+
+  <div class="in">
+
+    <button type="text" class="chnage" id="change">Molecule
+
+    </button>
+
+    <button type="text" class="chnage" id="change1">Atom
+
+    </button>
+
+    <button type="text" class="chnage" id="change2">Ions
+
+    </button>
+
+  </div>
+
+  <audio src="song.mp3" id="xad">
+
+  </audio>
+
+  <div id="fst" class="card"><i></i>
+
+    <h1 id="h2">
+      #Atom
+
+    </h1>
+
+    <p id="p2">
+      1 . It is the samllest unit of matter which may or may not have an independent existence , but always takes part
+      in a <br> chemical reaction <br><br>
+
+      2. Carbon-12 isotopes was chosen as the satnadrd reference for measuring atomic masses.
+
+    </p>
+
+  </div>
+
+  <div id="scd" class="card"><i></i>
+
+    <h1 id="h1">#Molecule
+
+    </h1>
+
+    <p id="p">
+      1. It is defined as the samllest particle of an element or a compound that is capable for an independent
+      existance all <br><br> the properties of tha substances
+
+    </p>
+
+  </div>
+
+  <div id="trd" class="card"><i></i>
+
+    <h1 id="h1">#ions
+
+    </h1>
+
+    <p id="p">
+      1. It is defined as the samllest particle of an element or a compound
+
+      that is capable for an independent <br> <br> existance all the properties of tha substances
+
+    </p>
+
+  </div>
+
+  <div id="for" class="card"><i></i>
+
+    <h1>click to get notes
+
+    </h1>
+
+    <p>
+      1. atom for atom <br> <br>
+
+      2. molecules for molecules <br> <br>
+
+      3. ions for ions <br> <br>
+
+    </p>
+
+  </div>
+
+  <script>
+
+    var fst = document.getElementById( "fst" );
+
+    var scd = document.getElementById( "scd" );
+
+    var trd = document.getElementById( "trd" );
+
+    var fo = document.getElementById( "for" );
+
+    var xad = document.getElementById( "xad" );
+
+    var body = document.getElementById( "body" );
+
+    var change = document.getElementById( "change" );
+
+    var change1 = document.getElementById( "change1" );
+
+    var change2 = document.getElementById( "change2" );
+
+    change.addEventListener( "click", first );
+
+    change1.addEventListener( "click", second );
+
+    change2.addEventListener( "click", third );
+
+
+    function first() {
+
+      aaaa();
+
+    }
+
+    function second() {
+
+      bbbb();
+
+    }
+
+    function third() {
+
+      cccb();
+
+    }
+    window.addEventListener( "keydown", move )
+
+
+    function move( s ) {
+      if ( s.keyCode === 88 )
+      {
+        d();
+      }
+    }
+
+    function a() {
+      trd.style.display = "none";
+      scd.style.display = "flex";
+      fst.style.display = "none"
+      fo.style.display = "none"
+    }
+
+    function b() {
+      scd.style.display = "none";
+      fst.style.display = "flex";
+      trd.style.display = "none";
+    }
+
+    function c() {
+      fst.style.display = "none";
+      trd.style.display = "flex";
+      scd.style.display = "none";
+    }
+
+    function aaaa() {
+      a();
+    }
+
+    function bbbb() {
+      b();
+    }
+
+    function cccb() {
+      c();
+    }
+
+
+    function d() {
+      if ( xad.paused )
+      {
+        xad.play()
+        xad.loop = true
+      } else
+      {
+        xad.pause()
+      }
+    }
+  </script>
+</body>
+
+</html>
